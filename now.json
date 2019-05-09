@@ -24,5 +24,8 @@
         "x-request-path": "$1"
       }
     }
-  ]
+  ],
+  "env": {
+    "GRAPHQL_ENDPOINT": "@graphql-endpoint"
+  }
 }
