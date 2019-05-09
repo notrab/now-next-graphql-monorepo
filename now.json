@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "name": "now-next-graphql-monorepo",
+  "builds": [
+    {
+      "src": "app/package.json",
+      "use": "@now/next",
+      "config": { "maxLambdaSize": "50mb" }
+    },
+    {
+      "src": "api/*.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/graphql",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/app/$1",
+      "headers": {
+        "x-request-path": "$1"
+      }
+    }
+  ]
+}

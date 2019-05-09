@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nodemon -e js,graphql -x node -r dotenv/config index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "apollo-server-micro": "^2.5.0",
+    "graphql": "^14.3.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.0.0",
+    "nodemon": "^1.19.0"
+  }
+}
