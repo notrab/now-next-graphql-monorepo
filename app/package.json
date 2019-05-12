@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "predev": "rimraf ./node_modules/.cache/babel-loader",
     "dev": "next",
     "start": "next",
     "build": "next build",
@@ -8,14 +9,19 @@
   },
   "dependencies": {
     "apollo-boost": "^0.3.1",
+    "apollo-link-context": "^1.0.17",
+    "cookie": "^0.3.1",
+    "final-form": "^4.12.0",
     "graphql": "^14.3.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-apollo": "^2.5.5",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-final-form": "^4.1.0"
   },
   "devDependencies": {
+    "babel-plugin-import-graphql": "^2.7.0",
     "dotenv": "^8.0.0"
   }
 }

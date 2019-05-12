@@ -1,0 +1,7 @@
+#import '../fragment/User.graphql'
+
+mutation confirmEmail($token: String!) {
+  confirmEmail(token: $token) {
+    ...User
+  }
+}

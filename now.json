@@ -13,10 +13,8 @@
     }
   ],
   "routes": [
-    {
-      "src": "/graphql",
-      "dest": "/api/index.js"
-    },
+    { "src": "/graphql", "dest": "/api/index.js" },
+    { "src": "/user/(?<slug>[^/]+)$", "dest": "/app/user?slug=$slug" },
     {
       "src": "/(.*)",
       "dest": "/app/$1",

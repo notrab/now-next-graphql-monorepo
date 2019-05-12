@@ -1,0 +1,10 @@
+#import '../fragment/User.graphql'
+
+mutation authenticate($email: String!, $password: String!) {
+  authenticate(email: $email, password: $password) {
+    token
+    user {
+      ...User
+    }
+  }
+}
