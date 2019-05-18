@@ -7,7 +7,7 @@ let apolloClient = null
 
 function create(initialState, { getToken }) {
   const httpLink = createHttpLink({
-    uri: 'https://graphql.emlakim.com/' || process.env.GRAPHQL_ENDPOINT,
+    uri: process.env.GRAPHQL_ENDPOINT,
     credentials: 'same-origin',
     fetch: !process.browser && fetch,
   })
